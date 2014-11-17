@@ -10,6 +10,10 @@
 
     <packaging>apk</packaging>
 
+    <properties>
+        <android.sdk.path>/home/johnnym/Tools/adt-bundle-linux-x86_64-20140702/sdk</android.sdk.path>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>
@@ -17,15 +21,26 @@
             <version>4.1.1.4</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>support-v4</artifactId>
+            <version>r7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dbtools</groupId>
+            <artifactId>dbtools-android</artifactId>
+            <version>1.2.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sqlcipher.jar</systemPath>
+        </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
-                <version>3.9.0-rc.1</version>
+                <version>3.9.0-rc.2</version>
                 <configuration>
                     <sdk>
                         <platform>19</platform>
@@ -44,4 +59,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

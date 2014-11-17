@@ -6,7 +6,7 @@
 
     <application android:label="Atlas">
         <activity
-                android:name=".AtlasMainActivity"
+                android:name=".Atlas"
                 android:label="Atlas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
